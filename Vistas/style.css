@@ -272,44 +272,66 @@ footer p{
 .shop{
     width: 100%;
     height: auto;
-    border: 1px solid;
-    display: flex;
-    flex-wrap: wrap;
     margin-top: 20px;
+    /* apply grid */
+    display: grid;
+    grid-template-areas:
+    "adressShop imgShop" 
+    "mapShop imgShop" 
+    "questionShop form" 
+    ;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:repeat(3,250px);
+    gap: 20px;
 }
-.shop div{
-    width: 50%;
-    height: 300px;
-    background: aquamarine;
+
+.mapShop{
+    grid-area: mapShop;
 }
 .mapShop iframe{
     width: 100%;
     height: 100%;
 }
 .adressShop{
-    padding: 50px 30px;
+    padding: 60px 30px;
+    grid-area: adressShop;
+    background-color: #87eba0;
 }
-.adressShop h3{
+.adressShop h3, .questionShop h3{
     font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 6px;
     margin-bottom: 20px;
 }
-.adressShop p{
+.adressShop p, .questionShop p{
     font-style: italic;
     letter-spacing: 3px;
     text-transform: capitalize;
     margin-bottom: 5px;
+    font-weight: bold;
 }
-.adressShop label{
+.adressShop label, .questionShop label{
     display: inline-block;
     font-style: italic;
     letter-spacing: 1px;
     margin-top: 10px;
 }
+.questionShop{
+    padding: 60px 30px;
+    grid-area: questionShop;
+    background: #77b9b1;
+}
+.imgShop{
+    background-image: url("../Media/m1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover; 
+    grid-area:imgShop;
+}
 form{
-    width: 50%;
-    border: 1px solid red;
+    grid-area: form;
+    background-color: #dad9d988;
+    box-shadow: 5px 5px 10px black;
 }
 form .input{
     width: 100%;
@@ -325,6 +347,7 @@ form .btn2{
     font-size: 15px;
     border: none;
     transition: all 300ms ease;
+    margin-top: 10px;
     float: right;
 }
 form .btn2:hover{
@@ -332,7 +355,10 @@ form .btn2:hover{
     background-color: #858484;
     cursor: pointer;
 }
-
+form textarea{
+    height: 100px;
+    resize: none;
+}
 /* html faq */
 .data{
     width: 100%;
