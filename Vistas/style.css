@@ -15,10 +15,21 @@ h1,h2,h3,h4{
     max-width: 1250px;
     margin: 0 auto;
 }
+header{
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 nav{
+    width: 100%;
+    height: auto;
     background-color: rgba(30, 30, 30, 1);
     padding: 20px 30px;
-    text-align: center;
+}
+.listNav{
+    display: flex;
+    justify-content: center;
 }
 nav li{
     list-style-type: none;
@@ -35,15 +46,11 @@ nav li a{
 nav li a:hover{
     opacity: 1;
 }
-header{
-    border-bottom: 1px solid black;
-}
 header img{
-    width: 150px;
-    position: relative;
-    left: 45%;
+    width: 200px;
+    height: 100px;
+    display: block;
 }
-
 footer{
     padding: 20px 0;
     border-top: black 1px solid;
@@ -78,8 +85,7 @@ footer p{
 .slider{
     width: 100%;
     max-width: 1200px;
-    height: 400px;
-    /* max-height: 300px; */
+    height: 500px;
     overflow: hidden;
     position: relative;
     grid-area: slider;
@@ -93,7 +99,7 @@ footer p{
 .slider li{
     list-style-type: none;
     width: 100%;
-    height: 400px;
+    height: 500px;
 }
 .slider img{
     width: 100%;
@@ -113,13 +119,17 @@ footer p{
     100%{margin-left:-300%;}
 }
 .boxSlider{
+    /* se mueve con la caja padre */
     position: absolute;
-    top: 90px;
-    left: 30px;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin: auto;
     z-index: 1;
+
     background-color: rgba(196, 196, 196, 0.6);
     width: 250px;
-    height: auto;
+    height: 200px;
     padding: 30px;
 }
 .boxSlider p{
@@ -196,9 +206,9 @@ footer p{
     height: 275px;
     overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 .card{
     width: 250px;
@@ -450,3 +460,62 @@ form textarea{
     font-style: italic;
     font-size: 15px;
 }
+.openBtn, .closeBtn{
+    display: none;
+}
+/* MEDIA QUERY */
+/* view movil */
+@media (max-width:500px){
+    .openBtn, .closeBtn{
+        display: block;
+        border: 0;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+        background-color: black ;
+        padding: 10px;
+    }
+    .listNav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: end;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        padding: 2rem;
+        color: #1c1c1c;
+    }
+    .listNav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    nav li a{
+        color: black;
+        padding-top: 20px;
+        margin: 0;
+    }
+    .mainHome{
+        grid-template-areas: 
+        "slider"
+        "article1Services"
+        "article2Services"
+        "featured"
+        ;
+        gap: 10px;
+    }
+    .slider{
+        height: 300px;
+    }
+    .featurd .collecionFeaturd{
+        height: auto;
+        overflow: visible;
+    }
+}
+/* view tablet */
