@@ -58,6 +58,7 @@ footer{
 footer p{
     color: #4d4b4b;
     display:inline-block ;
+    font-size: 20px;
 }
 .networkFooter{
     float: right;
@@ -128,12 +129,15 @@ footer p{
     z-index: 1;
 
     background-color: rgba(196, 196, 196, 0.6);
-    width: 250px;
-    height: 200px;
+    width: 300px;
+    height: 280px;
     padding: 30px;
 }
+.boxSlider label{
+    font-size: 30px;
+}
 .boxSlider p{
-    font-size: 40px;
+    font-size: 60px;
     margin: 10px 0;
 }
 .boxSlider button{
@@ -141,6 +145,7 @@ footer p{
     width: 100%;
     background-color: #f3f3f3;
     padding: 10px 0;
+    font-size: 20px;
 }
 .boxSlider button:hover{
     background-color: #3c3c3c;
@@ -155,12 +160,12 @@ footer p{
 }
 .article1Services h2{
     font-weight: normal;
-    font-size: 30px;
+    font-size: 35px;
     padding-top:60px;
 }
 .article1Services a{
     text-decoration: none;
-    font-size: 30px;
+    font-size: 35px;
     color: #f3f3f3;
     display: inline-block;
     position: relative;
@@ -195,11 +200,11 @@ footer p{
     padding: 30px 0;
     grid-area: featured;
 }
-.featurd h3{
+.featurd h2{
     font-weight: normal;
     text-transform: uppercase;
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
 }
 .featurd .collecionFeaturd{
     width: 100%;
@@ -260,7 +265,7 @@ footer p{
 }
 .items h2{
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 35px;
     letter-spacing: 3px;
 }
 .collecion{
@@ -452,21 +457,93 @@ form textarea{
     background-color: rgba(212, 209, 209, 0.5);
 }
 .contentData h3{
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-style: italic;
     text-transform: capitalize;
     letter-spacing: 2px;
+    font-size: 25px;
 }
 .contentData p{
     font-style: italic;
-    font-size: 15px;
+    font-size: 20px;
 }
 .openBtn, .closeBtn{
     display: none;
 }
 /* view movil */
+@media (max-width: 1023px){
+    
+    footer p{
+        font-size: 16px;
+    }
+    /* home html */
+    nav li a{
+        margin-right: 15px;
+    }
+    .mainHome{
+        display: grid;
+        grid-template-areas:
+        "slider slider"
+        "article1Services article2Services"
+        "featured featured"
+        ;
+        gap: 15px;
+    }
+    .slider{
+        height: 400px;
+    }
+    .boxSlider{
+        height: 240px;
+        width: 280px;
+    }
+    .boxSlider label{
+        font-size: 20px;
+    }
+    .boxSlider p{
+        font-size: 50px;
+    }
+    .boxSlider button{
+        font-size: 18px;
+    }
+    .article1Services h2, .article1Services a{
+        font-size: 30px;
+    }
+    .featurd h2{
+        font-size: 30px;
+    }
+    /* collecion html */
+    .items h2{
+        font-size: 28px;
+    }
+    .collecion{
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+    /* contact html */
+    .shop{
+        gap: 15px;
+        grid-template-rows: repeat(3, 220px);
+    }
+    .adressShop, .questionShop{
+        padding: 50px 25px;
+    }
+    form textarea{
+        height: 60px;
+    }
+    /* faq html */
+    .data{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        column-gap: 40px;
+        row-gap: 20px;
+    }
+    .contentData h3{
+        font-size: 22px;
+    }
+    .contentData p{
+        font-size: 17px;
+    }
+}
 @media (max-width:500px){
-
     .openBtn, .closeBtn{
         display: block;
         border: 0;
@@ -503,13 +580,13 @@ form textarea{
         margin: 0;
     }
     .mainHome{
+        display: grid;
+        gap: 10px;
         grid-template-areas: 
         "slider"
         "article1Services"
         "article2Services"
         "featured"
-        ;
-        gap: 10px;
     }
     .slider{
         height: 300px;
@@ -535,7 +612,7 @@ form textarea{
         ;
         gap: 10px;
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows:repeat(4,250px);
+        grid-template-rows:repeat(4,220px);
     }
     .imgShop{
         display: none;
