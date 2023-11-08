@@ -25,7 +25,10 @@ nav{
     width: 100%;
     height: auto;
     background-color: rgba(30, 30, 30, 1);
-    padding: 20px 30px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .listNav{
     display: flex;
@@ -89,7 +92,6 @@ footer p{
 }
 .slider{
     width: 100%;
-    max-width: 1200px;
     height: 500px;
     overflow: hidden;
     position: relative;
@@ -356,6 +358,9 @@ footer p{
     margin-top: 10px;
     color: #1c1c1c;
 }
+.colorsito{
+    color: black;
+}
 /* html contact */
 .shop{
     width: 100%;
@@ -472,6 +477,21 @@ form textarea{
     font-style: italic;
     font-size: 20px;
 }
+.openBtn, .closeBtn, .cartBtn, .userBtn{
+    display: inline-block;
+    border: 0;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background-color: black ;
+    padding: 10px;
+}
+.cartBtn, .userBtn{
+    color:#77b9b1;
+    background-color: white;
+    border-radius:50%;
+    margin-left: 10px;
+}
 .openBtn, .closeBtn{
     display: none;
 }
@@ -552,14 +572,15 @@ form textarea{
     }
 }
 @media (max-width:500px){
+    header, footer{
+        border: 0;
+    }
     .openBtn, .closeBtn{
         display: block;
-        border: 0;
-        font-size: 20px;
-        cursor: pointer;
-        color: white;
-        background-color: black ;
-        padding: 10px;
+    }  
+    nav{
+        padding: 20px 30px;
+        justify-content: space-between;
     }
     .listNav{
         opacity: 0;
@@ -575,7 +596,7 @@ form textarea{
         bottom: 0;
         background-color: white;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
-        padding: 2rem;
+        padding: 1rem 3rem;
         color: #1c1c1c;
     }
     .listNav.visible{
