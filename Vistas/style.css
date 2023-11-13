@@ -135,7 +135,7 @@ footer p{
     z-index: 1;
 
     background-color: rgba(196, 196, 196, 0.6);
-    width: 300px;
+    width: 350px;
     height: 300px;
     padding: 30px;
 }
@@ -203,7 +203,7 @@ footer p{
 }
 .featurd{
     background-color: beige;
-    padding: 30px 0;
+    padding: 40px 0;
     grid-area: featured;
 }
 .featurd h2{
@@ -211,6 +211,7 @@ footer p{
     text-transform: uppercase;
     text-align: center;
     font-size: 35px;
+    margin-bottom: 20px;
 }
 .featurd .collecionFeaturd{
     width: 100%;
@@ -222,25 +223,34 @@ footer p{
 .card{
     width: 300px;
     height: auto;
-    margin-top: 20px;
     border-radius: 5px;
     overflow: hidden;
     background-color: #cfcfcf;
+
 }
 .card .imgCard{
-    background-image: url("../Media/t3.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     width: 100%;
-    height: 200px;
-    transition: all 500ms ease-in-out;
+    height: 250px;
     position: relative;
 }
-.card .imgCard:hover{
-    background-image: url("../Media/t2.jpg");
+.imgCard img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-.card .imgCard:hover::after{
+.imgCard .on{
+    z-index: 2;
+}
+.imgCard .off{
+    z-index: 1;
+}
+.imgCard .on:active{
+    z-index: 0;
+    /* display: none; */
+}
+.imgCard:hover::after{
     content: 'Hot Sale';
     position: absolute;
     bottom:0;
@@ -249,6 +259,7 @@ footer p{
     background-color: rgb(121, 120, 120);
     text-align: center;
     padding: 10px 0;
+    z-index: 3;
 }
 .card a{
     display: block;
@@ -270,7 +281,7 @@ footer p{
 }
 .items h2{
     text-transform: uppercase;
-    font-size: 35px;
+    font-size: 40px;
     letter-spacing: 3px;
     font-weight: normal;
     padding-left: 30px;
@@ -280,33 +291,28 @@ footer p{
     height: auto;
     display: grid;
     padding-top: 20px;
-    gap: 10px;
+    gap: 20px;
     /* grid-template-columns: repeat(auto-fit,minmax(300px, 1fr)); */
     grid-template-columns: repeat(4,minmax(300px, 1fr));   
     justify-items: center;
 }
 .card2{
     width: 300px;
-    height:300px;
-    overflow: hidden;
-    margin-top: 25px;
-}
-.contentCard4{
+    height: 350px;
     display: block;
     color: black;
+    position: relative;
+    overflow: hidden;
+}
+.card2 img{
     width: 100%;
     height: 100%;
-    background-image: url("../Media/t1.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: transform 300ms ease;
-    position: relative;
+    transition: transform 500ms ease;
 }
-.contentCard4:hover{
-    transform: scaleX(1.1);
+.card2 img:hover{
+    transform: scale(1.1);
 }
-.contentCard4:hover::before{
+.card2:hover::before{
     content: 'View Details';
     width: 100%;
     bottom: 0;
@@ -315,25 +321,26 @@ footer p{
     color:white;
     position: absolute;
     text-align: center;
-    padding: 20px 0;
-    z-index: 2;;
+    padding: 22px 0;
+    z-index: 2;
 }
-.txtCard4{
+.txtCard2{
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
     text-align: center;
     z-index: 1;
-    background:white
+    background:white;
+
 }
-.txtCard4 h4{
+.txtCard2 h4{
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 20px;
+    font-size: 25px;
     margin: 5px 0;
 }
-.txtCard4 label{
+.txtCard2 label{
     font-style: italic;
     display: inline-block;
     margin-bottom: 5px;
@@ -373,7 +380,7 @@ footer p{
     "questionShop form" 
     ;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows:repeat(3,250px);
+    grid-template-rows:repeat(3,300px);
     gap: 20px;
 }
 
@@ -390,7 +397,7 @@ footer p{
     background-color: #87eba0;
 }
 .adressShop h3, .questionShop h3{
-    font-size: 22px;
+    font-size: 35px;
     text-transform: uppercase;
     letter-spacing: 6px;
     margin-bottom: 20px;
@@ -401,12 +408,14 @@ footer p{
     text-transform: capitalize;
     margin-bottom: 5px;
     font-weight: bold;
+    font-size: 25px;
 }
 .adressShop label, .questionShop label{
     display: inline-block;
     font-style: italic;
     letter-spacing: 1px;
     margin-top: 10px;
+    font-size: 25px;
 }
 .questionShop{
     width: 100%;
@@ -415,9 +424,8 @@ footer p{
     background: #77b9b1;
 }
 .imgShop{
-    background-image: url("../Media/m1.jpeg");
+    background-image: url("../Media/modelo1.jpg");
     background-position: center;
-    background-repeat: no-repeat;
     background-size:cover; 
     grid-area:imgShop;
 }
@@ -552,7 +560,16 @@ form textarea{
         grid-template-rows: repeat(3, 220px);
     }
     .adressShop, .questionShop{
-        padding: 50px 25px;
+        padding: 40px 25px;
+    }
+    .adressShop h3, .questionShop h3{
+        font-size: 30px;
+    }
+    .adressShop p, .questionShop p{
+        font-size: 18px;
+    }
+    .adressShop label, .questionShop label{
+        font-size: 18px;
     }
     form textarea{
         height: 60px;
@@ -590,15 +607,15 @@ form textarea{
         display: flex;
         flex-direction: column;
         justify-content: start;
-        align-items: end;
+        align-items: start;
         position: absolute;
-        z-index: 2;
+        z-index: 4;
         top: 0;
         left: 0;
         bottom: 0;
         background-color: white;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
-        padding: 1rem 3rem;
+        padding: 1rem 4rem 1rem 2rem;
         color: #1c1c1c;
     }
     .listNav.visible{
@@ -625,12 +642,17 @@ form textarea{
     .featurd .collecionFeaturd{
         height: auto;
         overflow: visible;
+        gap: 30px;
     }
 
     /*collecion*/
     .collecion{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+    }
+    .collecion .card{
+        margin-top: 30px;
     }
     /*lookbook*/
     .details{
