@@ -56,7 +56,7 @@ header img{
     display: block;
 }
 footer{
-    padding: 20px 0;
+    padding: 20px 5px;
     border-top: black 1px solid;
     display: flex;
     justify-content: space-between;
@@ -220,83 +220,8 @@ footer p{
     align-items: center;
     flex-wrap: wrap;
 }
+/* card222 */
 .card{
-    width: 300px;
-    height: auto;
-    border-radius: 5px;
-    overflow: hidden;
-    background-color: #cfcfcf;
-
-}
-.card .imgCard{
-    width: 100%;
-    height: 250px;
-    position: relative;
-}
-.imgCard img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.imgCard .on{
-    z-index: 2;
-}
-.imgCard .off{
-    z-index: 1;
-}
-.imgCard .on:active{
-    z-index: 0;
-    /* display: none; */
-}
-.imgCard:hover::after{
-    content: 'Hot Sale';
-    position: absolute;
-    bottom:0;
-    left: 0 ;
-    width: 100%;
-    background-color: rgb(121, 120, 120);
-    text-align: center;
-    padding: 10px 0;
-    z-index: 3;
-}
-.card a{
-    display: block;
-    text-decoration: none;
-    color: #1c1c1c;
-    text-transform: uppercase;
-    margin-top: 10px;
-    font-size: 20px;
-}
-.card label{
-    display: inline-block;
-    color: #6d6d6d;
-    margin-top:5px;
-}
-/* html collecion */
-.items{
-    /* background-color: burlywood; */
-    padding: 40px 0;
-}
-.items h2{
-    text-transform: uppercase;
-    font-size: 40px;
-    letter-spacing: 3px;
-    font-weight: normal;
-    padding-left: 30px;
-}
-.collecion{
-    width: 100%;
-    height: auto;
-    display: grid;
-    padding-top: 20px;
-    gap: 20px;
-    /* grid-template-columns: repeat(auto-fit,minmax(300px, 1fr)); */
-    grid-template-columns: repeat(4,minmax(300px, 1fr));   
-    justify-items: center;
-}
-.card2{
     width: 300px;
     height: 350px;
     display: block;
@@ -304,15 +229,15 @@ footer p{
     position: relative;
     overflow: hidden;
 }
-.card2 img{
+.card img{
     width: 100%;
     height: 100%;
     transition: transform 500ms ease;
 }
-.card2 img:hover{
+.card img:hover{
     transform: scale(1.1);
 }
-.card2:hover::before{
+.card:hover::before{
     content: 'View Details';
     width: 100%;
     bottom: 0;
@@ -344,6 +269,87 @@ footer p{
     font-style: italic;
     display: inline-block;
     margin-bottom: 5px;
+}
+/* html collecion */
+.items{
+    /* background-color: burlywood; */
+    padding: 40px 0;
+}
+.items h2{
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: normal;
+    padding-left: 30px;
+}
+.collecion{
+    width: 100%;
+    height: auto;
+    display: grid;
+    padding-top: 20px;
+    gap: 20px;
+    /* grid-template-columns: repeat(auto-fit,minmax(300px, 1fr)); */
+    grid-template-columns: repeat(4,minmax(300px, 1fr));   
+    justify-items: center;
+}
+.card2{
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #cfcfcf;
+
+}
+.card2 .imgCard{
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+.imgCard img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.imgCard .on{
+    z-index: 2;
+}
+.imgCard .off{
+    z-index: 1;
+}
+.imgCard .on:active{
+    z-index: 0;
+    /* display: none; */
+}
+.offer::after{
+    content: 'Oferta';
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: rgb(121, 120, 120);
+    text-align: center;
+    padding: 10px 10px;
+    z-index: 3;
+    color: #fafafa;
+}
+.card2 a{
+    display: block;
+    text-decoration: none;
+    color: #1c1c1c;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.card2 label{
+    display: inline-block;
+    color: #6d6d6d;
+    margin-top:5px;
+}
+.card2 span{
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
 }
 /* html lookbook */
 .details{
@@ -502,6 +508,29 @@ form textarea{
 .openBtn, .closeBtn{
     display: none;
 }
+.wassap{
+    position: fixed;
+    z-index: 3;
+    bottom: 45px;
+    right: 30px;
+    border-radius: 50%;
+    transition:ease 0.3s;
+    animation: efecto 1.2s infinite;
+}
+.wassap:hover{
+    transform: scale(1.1);
+}
+.wassap .btnWass{
+    width: 60px;
+}
+@keyframes efecto{
+    0%{
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+    }
+    100%{
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+}
 /* view tablet */
 @media (max-width: 1023px){
     
@@ -651,7 +680,7 @@ form textarea{
         grid-template-columns: repeat(1, 1fr);
         gap: 0;
     }
-    .collecion .card{
+    .collecion .card2{
         margin-top: 30px;
     }
     /*lookbook*/
