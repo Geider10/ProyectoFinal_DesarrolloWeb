@@ -1,0 +1,228 @@
+
+/* view tablet */
+@media (max-width: 1023px) {
+
+    footer p {
+        font-size: 16px;
+    }
+
+    /* home html */
+    nav li a {
+        margin-right: 15px;
+    }
+
+    .listNav {
+        margin: 0;
+    }
+
+    .mainHome {
+        display: grid;
+        grid-template-areas:
+            "slider slider"
+            "article1Services article2Services"
+            "featured featured"
+        ;
+        gap: 15px;
+    }
+
+    .slider {
+        height: 400px;
+    }
+
+    .boxSlider {
+        height: 240px;
+        width: 280px;
+    }
+
+    .boxSlider label {
+        font-size: 20px;
+    }
+
+    .boxSlider p {
+        font-size: 50px;
+    }
+
+    .boxSlider button {
+        font-size: 18px;
+    }
+
+    .article1Services h2,
+    .article1Services a {
+        font-size: 30px;
+    }
+
+    .featurd h2 {
+        font-size: 30px;
+    }
+
+    /* collecion html */
+    .items h2 {
+        font-size: 28px;
+    }
+
+    .collecion {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    /* contact html */
+    .shop {
+        gap: 15px;
+        grid-template-rows: repeat(3, 220px);
+    }
+
+    .adressShop,
+    .questionShop {
+        padding: 40px 25px;
+    }
+
+    .adressShop h3,
+    .questionShop h3 {
+        font-size: 30px;
+    }
+
+    .adressShop p,
+    .questionShop p {
+        font-size: 18px;
+    }
+
+    .adressShop label,
+    .questionShop label {
+        font-size: 18px;
+    }
+
+    form textarea {
+        height: 60px;
+    }
+
+    /* faq html */
+    .data {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        column-gap: 40px;
+        row-gap: 20px;
+    }
+
+    .contentData h3 {
+        font-size: 22px;
+    }
+
+    .contentData p {
+        font-size: 17px;
+    }
+}
+/*Media Movil*/
+@media (max-width:500px) {
+
+    header,
+    footer {
+        border: 0;
+    }
+
+    .items {
+        padding: 0;
+    }
+
+    .openBtn,
+    .closeBtn {
+        display: block;
+    }
+
+    nav {
+        padding: 20px 30px;
+        justify-content: space-between;
+    }
+
+    .listNav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: white;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        padding: 1rem 4rem 1rem 2rem;
+        color: #1c1c1c;
+    }
+
+    .listNav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav li a {
+        color: black;
+        padding-top: 20px;
+        margin: 0;
+    }
+
+    .mainHome {
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+            "slider"
+            "article1Services"
+            "article2Services"
+            "featured"
+    }
+
+    .slider {
+        height: 300px;
+    }
+
+    .featurd .collecionFeaturd {
+        height: auto;
+        overflow: visible;
+        gap: 30px;
+    }
+
+    /*collecion*/
+    .collecion {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+    }
+
+    .collecion .card2 {
+        margin-top: 30px;
+    }
+
+    /*lookbook*/
+    .details {
+        height: 550px;
+    }
+
+    .card3 .sizeCard {
+        height: 480px;
+    }
+
+    /*contact*/
+    .shop {
+        display: grid;
+        grid-template-areas:
+            "adressShop"
+            "mapShop"
+            "questionShop"
+            "form"
+        ;
+        gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 220px);
+    }
+
+    .imgShop {
+        display: none;
+    }
+
+    /*faq*/
+    .data {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+    }
+}

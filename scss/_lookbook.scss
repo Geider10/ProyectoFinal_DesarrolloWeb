@@ -1,0 +1,28 @@
+/*LOOKBOOK*/
+.details {
+    height: 660px;
+    overflow: hidden;
+}
+
+.card3 {
+    .sizeCard {
+        height: 600px;
+        opacity: 0.7;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-top: 10px;
+        color: #1c1c1c;
+    }
+}
+
+.colorsito {
+    color: black;
+}

@@ -1,0 +1,234 @@
+/*INDEX*/
+.mainHome {
+    width: 100%;
+    height: auto;
+    display: grid;
+    gap: 25px;
+    grid-template-areas: "slider slider slider" "article1Services article1Services article2Services" "featured featured featured";
+}
+
+.slider {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    grid-area: slider;
+
+    ul {
+        display: flex;
+        padding: 0;
+        animation: cambio 20s infinite alternate linear;
+        width: 400%;
+    }
+
+    li {
+        list-style-type: none;
+        width: 100%;
+        height: 500px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
+.boxSlider {
+    /* se mueve con la caja padre */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin: auto;
+    z-index: 1;
+    background-color: rgba(196, 196, 196, 0.6);
+    width: 350px;
+    height: 300px;
+    padding: 30px;
+
+    label {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 60px;
+        margin: 10px 0;
+    }
+
+    button {
+        border: none;
+        width: 100%;
+        background-color: #f3f3f3;
+        padding: 10px 0;
+        font-size: 20px;
+        transition: all 300ms ease;
+
+        &:hover {
+            background-color: #3c3c3c;
+            color: #f3f3f3;
+            cursor: pointer;
+        }
+    }
+}
+
+.article1Services {
+    background-color: red;
+    height: 200px;
+    grid-area: article1Services;
+    padding-left: 50px;
+
+    h2 {
+        font-weight: 300px;
+        font-size: 35px;
+        padding-top: 60px;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 35px;
+        color: #f3f3f3;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #f3f3f3;
+            transform: scale(1);
+            transform-origin: bottom left;
+            transition: transform 300ms ease-in-out;
+        }
+
+        &:hover::after {
+            transform: scale(0);
+            transform-origin: bottom left;
+        }
+    }
+}
+
+.article2Services {
+    height: 200px;
+    grid-area: article2Services;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.featurd {
+    background-color: beige;
+    padding: 40px 0;
+    grid-area: featured;
+
+    h2 {
+        font-weight: normal;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .collecionFeaturd {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* card222 */
+
+.card {
+    width: 300px;
+    height: 350px;
+    display: block;
+    color: black;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        transition: transform 500ms ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &:hover::before {
+        content: 'View Details';
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        color: white;
+        position: absolute;
+        text-align: center;
+        padding: 22px 0;
+        z-index: 2;
+    }
+}
+
+.txtCard2 {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: 1;
+    background: white;
+
+    h4 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 25px;
+        margin: 5px 0;
+    }
+
+    label {
+        font-style: italic;
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+}
