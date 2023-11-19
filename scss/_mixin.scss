@@ -1,0 +1,11 @@
+@mixin anclas($colorAncla,$sizeAncla){
+    text-decoration: none;
+    display: inline-block;
+    color: $colorAncla;
+    font-size: $sizeAncla;
+}
+// @mixin boxFlex($justifyCont,$aliItems){
+//     display: flex;
+//     justify-content:$justiCont ;
+//     align-items:$aliItems ;
+// }

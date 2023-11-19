@@ -70,22 +70,20 @@
     text-align: center;
     padding: 10px 10px;
     z-index: 3;
-    color: #fafafa;
+    color: $colorPrimario;
 }
 
 .card2 {
     a {
+        @include anclas($colorSecundario,20px);
         display: block;
-        text-decoration: none;
-        color: #1c1c1c;
         text-transform: uppercase;
         margin-top: 10px;
-        font-size: 20px;
     }
 
     label {
         display: inline-block;
-        color: #6d6d6d;
+        color: $colorTerciario;
         margin-top: 5px;
     }
 

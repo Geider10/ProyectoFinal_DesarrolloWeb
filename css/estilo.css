@@ -42,7 +42,7 @@ nav {
 .listNav {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  margin: 0;
 }
 
 nav li {
@@ -51,13 +51,14 @@ nav li {
 }
 nav li a {
   text-decoration: none;
+  color: #464646;
   display: inline-block;
-  color: #f1f1f1;
-  font-size: 20px;
-  opacity: 0.7;
+  margin-right: 30px;
+  opacity: 0.8;
 }
 nav li a:hover {
   opacity: 1;
+  color: red;
 }
 
 header img {
@@ -73,18 +74,18 @@ footer {
   justify-content: space-between;
 }
 footer p {
-  color: #464646;
+  color: #4d4b4b;
   display: inline-block;
   font-size: 20px;
   margin: 0;
 }
 
 .networkFooter a {
-  text-decoration: none;
   display: inline-block;
-  color: #464646;
-  font-size: 25px;
+  font-size: 20px;
   margin-left: 10px;
+  text-align: center;
+  color: black;
   transition: transform 300ms ease;
 }
 .networkFooter a:hover {
@@ -100,14 +101,14 @@ footer p {
   border: 0;
   font-size: 20px;
   cursor: pointer;
-  color: #f1f1f1;
+  color: white;
   background-color: black;
   padding: 10px;
 }
 
 .cartBtn,
 .userBtn {
-  color: #464646;
+  color: #8d8d8d;
   background-color: white;
   border-radius: 50%;
   margin-left: 15px;
@@ -230,7 +231,7 @@ footer p {
 }
 .boxSlider button:hover {
   background-color: #3c3c3c;
-  color: #f1f1f1;
+  color: #f3f3f3;
   cursor: pointer;
 }
 
@@ -247,9 +248,9 @@ footer p {
 }
 .article1Services a {
   text-decoration: none;
-  display: inline-block;
-  color: #f1f1f1;
   font-size: 35px;
+  color: #f3f3f3;
+  display: inline-block;
   position: relative;
 }
 .article1Services a::after {
@@ -298,12 +299,12 @@ footer p {
   flex-wrap: wrap;
 }
 
-/* card1 */
+/* card222 */
 .card {
   width: 300px;
   height: 350px;
   display: block;
-  color: #1c1c1c;
+  color: black;
   position: relative;
   overflow: hidden;
 }
@@ -412,21 +413,20 @@ footer p {
   text-align: center;
   padding: 10px 10px;
   z-index: 3;
-  color: #f1f1f1;
+  color: #fafafa;
 }
 
 .card2 a {
-  text-decoration: none;
-  display: inline-block;
-  color: #1c1c1c;
-  font-size: 20px;
   display: block;
+  text-decoration: none;
+  color: #1c1c1c;
   text-transform: uppercase;
   margin-top: 10px;
+  font-size: 20px;
 }
 .card2 label {
   display: inline-block;
-  color: #464646;
+  color: #6d6d6d;
   margin-top: 5px;
 }
 .card2 span {
@@ -449,19 +449,15 @@ footer p {
   opacity: 1;
 }
 .card3 a {
+  display: block;
   text-decoration: none;
-  display: inline-block;
-  color: #464646;
-  font-size: 15px;
   text-transform: uppercase;
   margin-top: 10px;
-}
-.card3 a h4 {
-  font-weight: bold;
+  color: #1c1c1c;
 }
 
 .colorsito {
-  color: #1c1c1c;
+  color: black;
 }
 
 .shop {
@@ -472,7 +468,7 @@ footer p {
   display: grid;
   grid-template-areas: "adressShop imgShop" "mapShop imgShop" "questionShop form";
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 350px);
+  grid-template-rows: repeat(3, 300px);
   gap: 20px;
 }
 
@@ -557,7 +553,7 @@ form .btn2 {
   display: inline-block;
   padding: 5px 20px;
   background-color: #1c1c1c;
-  color: #f1f1f1;
+  color: #ececec;
   font-size: 15px;
   border: none;
   transition: all 300ms ease;
@@ -566,7 +562,7 @@ form .btn2 {
 }
 form .btn2:hover {
   color: #1c1c1c;
-  background-color: #f1f1f1;
+  background-color: #858484;
   cursor: pointer;
 }
 form textarea {
@@ -606,7 +602,7 @@ form textarea {
   }
   /* home html */
   nav li a {
-    font-size: 16px;
+    margin-right: 15px;
   }
   .listNav {
     margin: 0;
@@ -713,16 +709,18 @@ form textarea {
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: #f1f1f1;
+    background-color: white;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
     padding: 1rem 4rem 1rem 2rem;
+    color: #1c1c1c;
   }
   .listNav.visible {
     opacity: 1;
     visibility: visible;
   }
   nav li a {
-    color: #1c1c1c;
+    color: black;
+    padding-top: 20px;
     margin: 0;
   }
   .mainHome {
@@ -773,4 +771,4 @@ form textarea {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=estilo.css.map */

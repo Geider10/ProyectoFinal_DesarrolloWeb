@@ -8,7 +8,7 @@
     display: grid;
     grid-template-areas: "adressShop imgShop" "mapShop imgShop" "questionShop form";
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 300px);
+    grid-template-rows: repeat(3, 350px);
     gap: 20px;
 }
 
@@ -97,7 +97,7 @@ form {
         display: inline-block;
         padding: 5px 20px;
         background-color: #1c1c1c;
-        color: #ececec;
+        color: $colorPrimario;
         font-size: 15px;
         border: none;
         transition: all 300ms ease;
@@ -105,8 +105,8 @@ form {
         float: right;
 
         &:hover {
-            color: #1c1c1c;
-            background-color: #858484;
+            color: $colorSecundario;
+            background-color: $colorPrimario;
             cursor: pointer;
         }
     }

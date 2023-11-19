@@ -1,4 +1,4 @@
-/*HEADER & FOOTER*/
+/*HEADER - FOOTER - RESETEO*/
 * {
     padding: 0;
     margin: 0;
@@ -42,19 +42,15 @@ nav {
 .listNav {
     display: flex;
     justify-content: center;
-    margin: 0;
+    gap: 30px;
 }
 
 nav li {
     list-style-type: none;
     display: inline-block;
-
     a {
-        text-decoration: none;
-        color: #f1f1f1;
-        display: inline-block;
-        margin-right: 30px;
-        opacity: 0.8;
+        @include anclas($colorPrimario,20px);
+        opacity: 0.7;
 
         &:hover {
             opacity: 1;
@@ -75,7 +71,7 @@ footer {
     justify-content: space-between;
 
     p {
-        color: #4d4b4b;
+        color: $colorTerciario;
         display: inline-block;
         font-size: 20px;
         margin: 0;
@@ -83,13 +79,9 @@ footer {
 }
 
 .networkFooter a {
-    display: inline-block;
-    font-size: 20px;
+    @include anclas($colorTerciario,25px);
     margin-left: 10px;
-    text-align: center;
-    color: black;
     transition: transform 300ms ease;
-
     &:hover {
         transform: scale(1.3);
     }
@@ -103,14 +95,14 @@ footer {
     border: 0;
     font-size: 20px;
     cursor: pointer;
-    color: white;
+    color: $colorPrimario;
     background-color: black;
     padding: 10px;
 }
 
 .cartBtn,
 .userBtn {
-    color: #8d8d8d;
+    color: $colorTerciario;
     background-color: white;
     border-radius: 50%;
     margin-left: 15px;
