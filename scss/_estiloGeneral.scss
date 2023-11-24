@@ -33,35 +33,46 @@ nav {
     width: 100%;
     height: auto;
     background-color: rgba(30, 30, 30, 1);
-    padding: 10px 0;
+    padding: 10px 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
-
+nav a{
+    @include anclas($colorPrimario,25px);
+}
+nav h1{
+    margin: 0;
+    font-weight: bold;
+    font-size: 35px;
+}
 .listNav {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 nav li {
     list-style-type: none;
     display: inline-block;
     a {
-        @include anclas($colorPrimario,20px);
+        @include anclas($colorPrimario,16px);
         opacity: 0.7;
-
         &:hover {
             opacity: 1;
         }
     }
 }
 
-header img {
-    width: 200px;
-    height: 100px;
-    display: block;
+header p{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-style: italic;
+    padding: 20px 0;
+    margin: 0;
 }
 
 footer {
@@ -69,7 +80,7 @@ footer {
     border-top: black 1px solid;
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
     p {
         color: $colorTerciario;
         display: inline-block;
@@ -103,9 +114,8 @@ footer {
 .cartBtn,
 .userBtn {
     color: $colorTerciario;
-    background-color: white;
+    background-color: $colorPrimario;
     border-radius: 50%;
-    margin-left: 15px;
 }
 
 .openBtn,
@@ -116,7 +126,7 @@ footer {
 .wassap {
     position: fixed;
     z-index: 3;
-    bottom: 45px;
+    bottom: 60px;
     right: 30px;
     border-radius: 50%;
     transition: ease 0.3s;
