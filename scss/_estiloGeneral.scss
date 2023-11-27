@@ -82,7 +82,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     p {
-        color: $colorTerciario;
+        color: $colorSecundario;
         display: inline-block;
         font-size: 20px;
         margin: 0;
@@ -90,7 +90,7 @@ footer {
 }
 
 .networkFooter a {
-    @include anclas($colorTerciario,25px);
+    @include anclas($colorSecundario,25px);
     margin-left: 10px;
     transition: transform 300ms ease;
     &:hover {

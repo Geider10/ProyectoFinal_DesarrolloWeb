@@ -1,6 +1,6 @@
 /*LOOKBOOK*/
 .details {
-    height: 660px;
+    height: 700px;
     overflow: hidden;
 }
 .card3 {
@@ -17,7 +17,7 @@
         @include anclas($colorTerciario,15px);
         text-transform: uppercase;
         margin-top: 10px;
-        h4{
+        h3{
             font-weight: bold;
         }
     }
