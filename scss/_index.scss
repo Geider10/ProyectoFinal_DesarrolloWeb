@@ -89,14 +89,14 @@
         margin: 10px 0;
     }
 
-    button {
-        border: none;
-        width: 100%;
-        background-color: #f3f3f3;
+    a {
+        @include anclas($colorSecundario,20px);
+        background-color: $colorPrimario;
+        width:100%;
         padding: 10px 0;
-        font-size: 20px;
         transition: all 300ms ease;
-
+        border-radius: 5px;
+        text-align: center;
         &:hover {
             background-color: #3c3c3c;
             color: $colorPrimario;
@@ -106,7 +106,7 @@
 }
 
 .article1Services {
-    background-color: red;
+    background-image: url("../Media/back.jpg");
     height: 200px;
     grid-area: article1Services;
     padding-left: 50px;
@@ -118,9 +118,9 @@
     }
 
     a {
-        @include anclas($colorPrimario,35px);
+        @include anclas($colorSecundario,35px);
         position: relative;
-
+        font-weight: bold;
         &::after {
             content: '';
             position: absolute;
@@ -128,7 +128,7 @@
             left: 0;
             width: 100%;
             height: 3px;
-            background-color: #f3f3f3;
+            background-color: $colorSecundario;
             transform: scale(1);
             transform-origin: bottom left;
             transition: transform 300ms ease-in-out;
@@ -152,10 +152,8 @@
 }
 
 .featurd {
-    background-color: beige;
     padding: 40px 0;
     grid-area: featured;
-
     h2 {
         font-weight: normal;
         text-transform: uppercase;
@@ -180,6 +178,7 @@
     height: 350px;
     display: block;
     color: $colorSecundario;
+    border-radius:20px;
     position: relative;
     overflow: hidden;
 
@@ -216,7 +215,7 @@
     z-index: 1;
     background: white;
 
-    h4 {
+    h3 {
         text-transform: uppercase;
         letter-spacing: 2px;
         font-size: 25px;
@@ -227,5 +226,6 @@
         font-style: italic;
         display: inline-block;
         margin-bottom: 5px;
+        font-size: 20px;
     }
 }

@@ -3,15 +3,8 @@
     height: 700px;
     overflow: hidden;
 }
-.card3 {
-    .sizeCard {
-        height: 600px;
-        opacity: 0.7;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
+.card3{
+    box-shadow: 0 5px 10px black;
 
     a {
         @include anclas($colorTerciario,15px);
@@ -22,7 +15,6 @@
         }
     }
 }
-
 .colorsito {
-    color: $colorSecundario;
+    color: black;
 }

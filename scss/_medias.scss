@@ -115,12 +115,23 @@
 }
 /*Media Movil*/
 @media (max-width:500px) {
-
+    header p{
+        display: none;
+    }
     header,
     footer {
         border: 0;
+        flex-direction: column;
+        gap: 20px;
+        background-color: black;
+        
     }
-
+    footer p{
+        color: $colorPrimario;
+    }
+    .networkFooter a{
+        color: $colorPrimario;
+    }
     .items {
         padding: 0;
     }
@@ -183,8 +194,15 @@
         overflow: visible;
         gap: 30px;
     }
-
+    /*btn wsp*/
+    .wassap{
+        bottom: 80px;
+    }
     /*collecion*/
+    .items h2{
+        margin-top: 20px;
+        font-weight: bold;
+    }
     .collecion {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -213,24 +231,32 @@
             "questionShop"
             "form"
         ;
-        gap: 10px;
+        gap: 20px;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, 220px);
+        margin-bottom: 20px;
     }
 
     .imgShop {
         display: none;
     }
     .adressShop, .questionShop{
-        padding: 20px 10px;
+        padding: 20px 20px;
     }
     .adressShop p,.questionShop p{
-        font-size: 17px;
+        font-size: 16px;
+    }
+    form{
+        padding: 10px 20px;
+    }
+    form .btn2{
+        margin: 0;
+        padding: 5px 20px;
     }
     /*faq*/
     .data {
         display: grid;
-        gap: 30px;
+        gap: 20px;
         grid-template-columns: repeat(1, minmax(300px, 1fr));
     }
 

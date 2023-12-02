@@ -4,3 +4,7 @@
     color: $colorAncla;
     font-size: $sizeAncla;
 }
+@mixin borderGeneral($radioBorder){
+    border-radius: $radioBorder;
+    overflow: hidden;
+}

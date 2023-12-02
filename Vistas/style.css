@@ -32,7 +32,7 @@ header {
 nav {
   width: 100%;
   height: auto;
-  background-color: rgb(30, 30, 30);
+  background-color: black;
   padding: 10px 50px;
   display: flex;
   justify-content: space-between;
@@ -85,7 +85,7 @@ header p {
 }
 
 footer {
-  padding: 20px 5px;
+  padding: 20px 30px;
   border-top: black 1px solid;
   display: flex;
   justify-content: space-between;
@@ -238,22 +238,26 @@ footer p {
   font-size: 60px;
   margin: 10px 0;
 }
-.boxSlider button {
-  border: none;
-  width: 100%;
-  background-color: #f3f3f3;
-  padding: 10px 0;
+.boxSlider a {
+  text-decoration: none;
+  display: inline-block;
+  color: #1c1c1c;
   font-size: 20px;
+  background-color: #f1f1f1;
+  width: 100%;
+  padding: 10px 0;
   transition: all 300ms ease;
+  border-radius: 5px;
+  text-align: center;
 }
-.boxSlider button:hover {
+.boxSlider a:hover {
   background-color: #3c3c3c;
   color: #f1f1f1;
   cursor: pointer;
 }
 
 .article1Services {
-  background-color: red;
+  background-image: url("../Media/back.jpg");
   height: 200px;
   grid-area: article1Services;
   padding-left: 50px;
@@ -266,9 +270,10 @@ footer p {
 .article1Services a {
   text-decoration: none;
   display: inline-block;
-  color: #f1f1f1;
+  color: #1c1c1c;
   font-size: 35px;
   position: relative;
+  font-weight: bold;
 }
 .article1Services a::after {
   content: "";
@@ -277,7 +282,7 @@ footer p {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: #f3f3f3;
+  background-color: #1c1c1c;
   transform: scale(1);
   transform-origin: bottom left;
   transition: transform 300ms ease-in-out;
@@ -297,7 +302,6 @@ footer p {
 }
 
 .featurd {
-  background-color: beige;
   padding: 40px 0;
   grid-area: featured;
 }
@@ -322,6 +326,7 @@ footer p {
   height: 350px;
   display: block;
   color: #1c1c1c;
+  border-radius: 20px;
   position: relative;
   overflow: hidden;
 }
@@ -355,7 +360,7 @@ footer p {
   z-index: 1;
   background: white;
 }
-.txtCard2 h4 {
+.txtCard2 h3 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 25px;
@@ -365,6 +370,7 @@ footer p {
   font-style: italic;
   display: inline-block;
   margin-bottom: 5px;
+  font-size: 20px;
 }
 
 .items {
@@ -374,7 +380,7 @@ footer p {
   text-transform: uppercase;
   font-size: 40px;
   letter-spacing: 3px;
-  font-weight: normal;
+  font-weight: bold;
   padding-left: 30px;
 }
 
@@ -391,9 +397,9 @@ footer p {
 .card2 {
   width: 300px;
   height: auto;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: 1px solid;
   overflow: hidden;
-  background-color: #cfcfcf;
 }
 .card2 .imgCard {
   width: 100%;
@@ -423,13 +429,16 @@ footer p {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgb(121, 120, 120);
+  background-color: black;
   text-align: center;
   padding: 10px 10px;
   z-index: 3;
   color: #f1f1f1;
 }
 
+.card2 .tituloCard2 {
+  padding: 10px 0 10px 5px;
+}
 .card2 a {
   text-decoration: none;
   display: inline-block;
@@ -442,7 +451,6 @@ footer p {
 .card2 label {
   display: inline-block;
   color: #464646;
-  margin-top: 5px;
 }
 .card2 span {
   text-decoration: line-through;
@@ -456,12 +464,8 @@ footer p {
   overflow: hidden;
 }
 
-.card3 .sizeCard {
-  height: 600px;
-  opacity: 0.7;
-}
-.card3 .sizeCard:hover {
-  opacity: 1;
+.card3 {
+  box-shadow: 0 5px 10px black;
 }
 .card3 a {
   text-decoration: none;
@@ -476,13 +480,14 @@ footer p {
 }
 
 .colorsito {
-  color: #1c1c1c;
+  color: black;
 }
 
 .shop {
   width: 100%;
   height: auto;
   margin-top: 20px;
+  padding: 0 20px;
   /* apply grid */
   display: grid;
   grid-template-areas: "adressShop imgShop" "mapShop imgShop" "questionShop form";
@@ -492,6 +497,8 @@ footer p {
 }
 
 .mapShop {
+  border-radius: 10px;
+  overflow: hidden;
   grid-area: mapShop;
 }
 .mapShop iframe {
@@ -503,26 +510,18 @@ footer p {
   padding: 60px 30px;
   grid-area: adressShop;
   background-color: #87eba0;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .adressShop h3 {
   font-size: 35px;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  margin-bottom: 20px;
-}
-
-.questionShop h3 {
-  font-size: 35px;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .adressShop p,
 .questionShop p {
-  font-style: italic;
-  margin-bottom: 5px;
-  font-weight: bold;
   font-size: 20px;
 }
 
@@ -531,13 +530,13 @@ footer p {
   padding: 60px 30px;
   grid-area: questionShop;
   background: #77b9b1;
+  border-radius: 10px;
+  overflow: hidden;
 }
-.questionShop label {
-  display: inline-block;
-  font-style: italic;
-  letter-spacing: 1px;
-  margin-top: 10px;
-  font-size: 25px;
+.questionShop h3 {
+  font-size: 35px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .imgShop {
@@ -545,12 +544,16 @@ footer p {
   background-position: center;
   background-size: cover;
   grid-area: imgShop;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 form {
   grid-area: form;
-  background-color: rgba(218, 217, 217, 0.5333333333);
-  box-shadow: 5px 5px 10px black;
+  background-color: rgba(177, 177, 177, 0.5333333333);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 50px 30px;
 }
 form .input {
   width: 100%;
@@ -560,17 +563,19 @@ form .input {
 }
 form .btn2 {
   display: inline-block;
-  padding: 5px 20px;
-  background-color: #1c1c1c;
-  color: #f1f1f1;
+  padding: 10px 30px;
+  background-color: transparent;
+  color: #1c1c1c;
   font-size: 15px;
-  border: none;
+  border: 1px solid black;
   transition: all 300ms ease;
   margin-top: 10px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 form .btn2:hover {
-  color: #1c1c1c;
-  background-color: #f1f1f1;
+  color: #f1f1f1;
+  background-color: #1c1c1c;
   cursor: pointer;
 }
 form textarea {
@@ -581,26 +586,27 @@ form textarea {
 .data {
   width: 100%;
   display: grid;
-  column-gap: 60px;
-  row-gap: 40px;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   grid-template-rows: repeat(3, 1fr);
-  margin: 20px 0;
+  padding: 30px;
+  gap: 20px;
 }
 
 .contentData {
-  background-color: rgba(212, 209, 209, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid;
+  padding: 10px;
 }
 .contentData h3 {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   font-style: italic;
   text-transform: capitalize;
   letter-spacing: 2px;
   font-size: 25px;
 }
 .contentData p {
-  font-style: italic;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* view tablet */
@@ -696,9 +702,21 @@ form textarea {
 }
 /*Media Movil*/
 @media (max-width: 500px) {
+  header p {
+    display: none;
+  }
   header,
   footer {
     border: 0;
+    flex-direction: column;
+    gap: 20px;
+    background-color: black;
+  }
+  footer p {
+    color: #f1f1f1;
+  }
+  .networkFooter a {
+    color: #f1f1f1;
   }
   .items {
     padding: 0;
@@ -752,7 +770,15 @@ form textarea {
     overflow: visible;
     gap: 30px;
   }
+  /*btn wsp*/
+  .wassap {
+    bottom: 80px;
+  }
   /*collecion*/
+  .items h2 {
+    margin-top: 20px;
+    font-weight: bold;
+  }
   .collecion {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -772,25 +798,33 @@ form textarea {
   .shop {
     display: grid;
     grid-template-areas: "adressShop" "mapShop" "questionShop" "form";
-    gap: 10px;
+    gap: 20px;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 220px);
+    margin-bottom: 20px;
   }
   .imgShop {
     display: none;
   }
   .adressShop, .questionShop {
-    padding: 20px 10px;
+    padding: 20px 20px;
   }
   .adressShop p, .questionShop p {
-    font-size: 17px;
+    font-size: 16px;
+  }
+  form {
+    padding: 10px 20px;
+  }
+  form .btn2 {
+    margin: 0;
+    padding: 5px 20px;
   }
   /*faq*/
   .data {
     display: grid;
-    gap: 30px;
+    gap: 20px;
     grid-template-columns: repeat(1, minmax(300px, 1fr));
   }
 }
 
-/*# sourceMappingURL=Style.css.map */
+/*# sourceMappingURL=style.css.map */

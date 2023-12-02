@@ -2,18 +2,18 @@
 .data {
     width: 100%;
     display: grid;
-    column-gap: 60px;
-    row-gap: 40px;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     grid-template-rows: repeat(3, 1fr);
-    margin: 20px 0;
+    padding: 30px;
+    gap: 20px;
 }
 
 .contentData {
-    background-color: rgba(212, 209, 209, 0.5);
-
+    @include borderGeneral(10px);
+    border: 1px solid;
+    padding: 10px;
     h3 {
-        margin-bottom: 25px;
+        margin-bottom: 10px;
         font-style: italic;
         text-transform: capitalize;
         letter-spacing: 2px;
@@ -21,7 +21,6 @@
     }
 
     p {
-        font-style: italic;
-        font-size: 20px;
+        font-size: 18px;
     }
 }
