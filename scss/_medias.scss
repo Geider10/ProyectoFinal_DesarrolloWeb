@@ -57,7 +57,9 @@
     .featurd h2 {
         font-size: 30px;
     }
-
+    .featurd .collecionFeaturd{
+        gap: 20px;
+    }
     /* collecion html */
     .items h2 {
         font-size: 28px;
@@ -65,7 +67,15 @@
 
     .collecion {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 20px;
+    }
+    /*MODELOS HTML */
+    .details {
+        height: 550px;
+    }
+
+    .card3 .sizeCard {
+        height: 480px;
     }
 
     /* contact html */
@@ -74,24 +84,21 @@
         grid-template-rows: repeat(3, 220px);
     }
 
-    .adressShop,
-    .questionShop {
-        padding: 40px 25px;
+    .adressShop, .questionShop{
+        padding: 20px 20px;
     }
-
-    .adressShop h3,
-    .questionShop h3 {
+    .adressShop h3, .questionShop h3{
         font-size: 30px;
     }
-
-    .adressShop p,
-    .questionShop p {
-        font-size: 18px;
+    .adressShop p,.questionShop p{
+        font-size: 16px;
     }
-
-    .adressShop label,
-    .questionShop label {
-        font-size: 18px;
+    form{
+        padding: 10px 20px;
+    }
+    form .btn2{
+        margin: 0;
+        padding: 5px 20px;
     }
 
     form textarea {
@@ -214,13 +221,6 @@
     }
 
     /*lookbook*/
-    .details {
-        height: 550px;
-    }
-
-    .card3 .sizeCard {
-        height: 480px;
-    }
 
     /*contact*/
     .shop {
@@ -239,19 +239,6 @@
 
     .imgShop {
         display: none;
-    }
-    .adressShop, .questionShop{
-        padding: 20px 20px;
-    }
-    .adressShop p,.questionShop p{
-        font-size: 16px;
-    }
-    form{
-        padding: 10px 20px;
-    }
-    form .btn2{
-        margin: 0;
-        padding: 5px 20px;
     }
     /*faq*/
     .data {
