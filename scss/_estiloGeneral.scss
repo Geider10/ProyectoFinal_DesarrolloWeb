@@ -1,4 +1,4 @@
-/*HEADER - FOOTER - RESETEO*/
+/* RESETEO*/
 * {
     padding: 0;
     margin: 0;
@@ -21,7 +21,7 @@ h4 {
     max-width: 1500px;
     margin: 0 auto;
 }
-
+// HEADER
 header {
     border-bottom: 1px solid black;
     display: flex;
@@ -74,7 +74,7 @@ header p{
     padding: 20px 0;
     margin: 0;
 }
-
+//FOOTER
 footer {
     padding: 20px 30px;
     border-top: black 1px solid;

@@ -1,4 +1,4 @@
-/*HEADER - FOOTER - RESETEO*/
+/* RESETEO*/
 * {
   padding: 0;
   margin: 0;
@@ -259,7 +259,7 @@ footer p {
 }
 
 .article1Services {
-  background-image: url("../media/back.png");
+  background-image: url("../Media/back.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -392,14 +392,14 @@ footer p {
   width: 100%;
   height: auto;
   display: grid;
-  padding: 20px;
-  gap: 30px;
+  padding: 10px;
+  row-gap: 30px;
   grid-template-columns: repeat(4, minmax(300px, 1fr));
   justify-items: center;
 }
 
 .card2 {
-  width: 300px;
+  width: 280px;
   height: auto;
   border-radius: 10px;
   border: 1px solid;
@@ -492,7 +492,6 @@ footer p {
   height: auto;
   margin-top: 20px;
   padding: 0 30px;
-  /* apply grid */
   display: grid;
   grid-template-areas: "adressShop imgShop" "mapShop imgShop" "questionShop form";
   grid-template-columns: repeat(2, 1fr);
@@ -544,7 +543,7 @@ footer p {
 }
 
 .imgShop {
-  background-image: url("../Media/modelo1.jpg");
+  background-image: url("../Media/somos.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -719,7 +718,7 @@ form textarea {
     font-size: 17px;
   }
 }
-/*Media Movil*/
+/*VIEW Movil*/
 @media (max-width: 500px) {
   header p {
     display: none;

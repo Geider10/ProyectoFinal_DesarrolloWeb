@@ -14,14 +14,14 @@
     width: 100%;
     height: auto;
     display: grid;
-    padding: 20px;
-    gap: 30px;
+    padding: 10px;
+    row-gap: 30px;
     grid-template-columns: repeat(4, minmax(300px, 1fr));
     justify-items: center;
 }
 
 .card2 {
-    width: 300px;
+    width: 280px;
     height: auto;
     border-radius: 10px;
     border: 1px solid;
