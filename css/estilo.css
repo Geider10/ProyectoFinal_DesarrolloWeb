@@ -344,7 +344,7 @@ footer p {
   transform: scale(1.1);
 }
 .card:hover::before {
-  content: "View Details";
+  content: "Ver mas";
   width: 100%;
   bottom: 0;
   left: 0;
@@ -848,4 +848,4 @@ form textarea {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=estilo.css.map */

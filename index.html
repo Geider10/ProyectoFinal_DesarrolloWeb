@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="La mejor selección de calzado te espera en nuestra tienda online. Descubre la comodidad y el estilo que necesitas para brillar.">
 
-    <link rel="stylesheet" href="Vistas/style.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,10 +24,10 @@
             <ul class="listNav" id="nav">
                 <button class="closeBtn" id="close"><i class="fa-solid fa-xmark"></i></button>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="Htmls/collecion.html">Calzados</a></li>
-                <li><a href="Htmls/lookbook.html">Modelos</a></li>
-                <li><a href="Htmls/contact.html">Contacto</a></li>
-                <li><a href="Htmls/faq.html">FAQ</a></li>
+                <li><a href="html/collecion.html">Calzados</a></li>
+                <li><a href="html/lookbook.html">Modelos</a></li>
+                <li><a href="html/contact.html">Contacto</a></li>
+                <li><a href="html/faq.html">FAQ</a></li>
                 <li><button class="cartBtn"><i class="fa-solid fa-cart-shopping"></i></button></li>
             </ul>
         </nav>
@@ -36,8 +36,8 @@
     <a href="https://wa.me/541161539624?text=Quiero informacion sobre:" target="_blank" class="wassap">
         <img src="media/wassap.png" alt="logo de wassap" class="btnWass">
     </a>
-    <main class="mainHome patron">
-        <section class="slider">
+    <div class="mainHome patron">
+        <main class="slider">
             <ul>
                 <li><img src="media/back1.jpg" alt="Una mujer con vestido blanco mostrando sus tacos rosas"></li>
                 <li><img src="media/back2.jpg" alt="Una mujer sentada se esta probando distintos tacos"></li>
@@ -47,34 +47,35 @@
             <div class="boxSlider">
                 <span>20% off</span>
                 <p>VERANO ES TODO</p>
-                <a href="Htmls/collecion.html">Calzados</a>
+                <a href="html/collecion.html">Calzados</a>
             </div>
-        </section>
+        </main>
         <section class="article1Services">
             <h2>Revisa nuestros modelos</h2>
-            <a href="Htmls/lookbook.html">Modelos</a>
+            <a href="html/lookbook.html">Modelos</a>
         </section>
         <section class="article2Services">
             <img src="media/freeShiping.jpg" alt="Es un cartel que aviso que el envio es gratis">
         </section>
+        <!-- las cartas tiene ancla para crear una alert en js de sumar al carrito -->
         <section class="featurd">
             <h2>Mejora tu estilo</h2>
             <div class="collecionFeaturd">
-                <a href="Htmls/collecion.html" class="card">
+                <a href="html/collecion.html" class="card">
                     <img src="media/sandalia1.png" alt="sandalias negras con plataforma">
                     <div class="txtCard">
                         <h3>Roma</h3>
                         <p>$65000</p>
                     </div>
                 </a>
-                <a href="Htmls/collecion.html" class="card">
+                <a href="html/collecion.html" class="card">
                     <img src="media/sandalia2.png" alt="sandalias clasicas marrones">
                     <div class="txtCard">
                         <h3>Milan</h3>
                         <p>$45000</p>
                     </div>
                 </a>
-                <a href="Htmls/collecion.html" class="card">
+                <a href="html/collecion.html" class="card">
                     <img src="media/sandalia3.png" alt="sandalias blancas ideal para salir">
                     <div class="txtCard">
                         <h3>Whiting</h3>
@@ -83,8 +84,8 @@
                 </a>
             </div>
         </section>
-    </main>
-    <!-- aguante boquita -->
+
+    </div>
     <footer class="patron">
         <p><i class="fa-regular fa-copyright"></i>  2023 by Geider Frias, derechos reservados</p>
         <div class="networkFooter">
@@ -93,6 +94,6 @@
             <a href="https://www.instagram.com"> <i class="fa-brands fa-instagram"></i></a>
         </div>
     </footer>
-    <script src="Logica/javas.js"></script>
+    <script src="js/javas.js"></script>
 </body>
 </html>
