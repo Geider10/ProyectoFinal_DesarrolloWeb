@@ -160,7 +160,6 @@ footer p {
     box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
   }
 }
-/*INDEX*/
 .mainHome {
   width: 100%;
   height: auto;
@@ -220,7 +219,6 @@ footer p {
   }
 }
 .boxSlider {
-  /* se mueve con la caja padre */
   position: absolute;
   top: 0;
   bottom: 0;
@@ -325,7 +323,6 @@ footer p {
   flex-wrap: wrap;
 }
 
-/* card1 */
 .card {
   width: 300px;
   height: 350px;
@@ -462,7 +459,6 @@ footer p {
   margin-right: 5px;
 }
 
-/*LOOKBOOK*/
 .details {
   height: 700px;
   overflow: hidden;
