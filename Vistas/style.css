@@ -259,7 +259,10 @@ footer p {
 }
 
 .article1Services {
-  background-image: url("../Media/back.jpg");
+  background-image: url("../media/back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 200px;
   grid-area: article1Services;
   padding-left: 50px;
@@ -510,7 +513,7 @@ footer p {
 .adressShop {
   padding: 60px 30px;
   grid-area: adressShop;
-  background-color: #87eba0;
+  background: #77b9b1;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -544,6 +547,7 @@ footer p {
   background-image: url("../Media/modelo1.jpg");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   grid-area: imgShop;
   border-radius: 10px;
   overflow: hidden;
@@ -681,7 +685,7 @@ form textarea {
     grid-template-rows: repeat(3, 220px);
   }
   .adressShop, .questionShop {
-    padding: 20px 20px;
+    padding: 10px 20px;
   }
   .adressShop h3, .questionShop h3 {
     font-size: 30px;
@@ -695,6 +699,9 @@ form textarea {
   form .btn2 {
     margin: 0;
     padding: 5px 20px;
+    background-color: #1c1c1c;
+    color: #f1f1f1;
+    border: 0;
   }
   form textarea {
     height: 60px;
@@ -805,7 +812,7 @@ form textarea {
   }
   /*btn wsp*/
   .wassap {
-    bottom: 80px;
+    bottom: 40px;
   }
   /*collecion*/
   .items h2 {

@@ -24,7 +24,7 @@
 .adressShop {
     padding: 60px 30px;
     grid-area: adressShop;
-    background-color: #87eba0;
+    background: #77b9b1;
     @include borderGeneral(10px);
     h3 {
         font-size: 35px;
@@ -56,6 +56,7 @@
     background-image: url("../Media/modelo1.jpg");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     grid-area: imgShop;
     @include borderGeneral(10px);
 }

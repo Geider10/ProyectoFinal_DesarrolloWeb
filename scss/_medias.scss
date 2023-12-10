@@ -86,7 +86,7 @@
     }
 
     .adressShop, .questionShop{
-        padding: 20px 20px;
+        padding: 10px 20px;
     }
     .adressShop h3, .questionShop h3{
         font-size: 30px;
@@ -100,6 +100,9 @@
     form .btn2{
         margin: 0;
         padding: 5px 20px;
+        background-color: $colorSecundario;
+        color: $colorPrimario;
+        border: 0;
     }
 
     form textarea {
@@ -227,7 +230,7 @@
     }
     /*btn wsp*/
     .wassap{
-        bottom: 80px;
+        bottom: 40px;
     }
     /*collecion*/
     .items h2{

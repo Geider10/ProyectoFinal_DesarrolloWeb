@@ -105,7 +105,10 @@
 }
 
 .article1Services {
-    background-image: url("../Media/back.jpg");
+    background-image: url("../media/back.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 200px;
     grid-area: article1Services;
     padding-left: 50px;
