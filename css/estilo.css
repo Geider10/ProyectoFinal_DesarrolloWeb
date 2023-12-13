@@ -460,23 +460,18 @@ footer p {
 }
 
 .details {
-  height: 700px;
+  height: 630px;
   overflow: hidden;
+  background: rgba(177, 177, 177, 0.5333333333);
 }
 
 .card3 {
-  box-shadow: 0 5px 10px black;
+  padding-left: 20px;
 }
-.card3 a {
-  text-decoration: none;
-  display: inline-block;
-  color: #464646;
-  font-size: 15px;
-  text-transform: uppercase;
-  margin-top: 10px;
-}
-.card3 a h3 {
+.card3 h3 {
   font-weight: bold;
+  background-color: white;
+  padding: 10px 0;
 }
 
 .colorsito {
@@ -553,7 +548,7 @@ form {
   background-color: rgba(177, 177, 177, 0.5333333333);
   border-radius: 10px;
   overflow: hidden;
-  padding: 50px 30px;
+  padding: 30px 30px;
 }
 form .input {
   width: 100%;
@@ -561,15 +556,18 @@ form .input {
   padding: 5px 20px;
   margin-bottom: 5px;
 }
+form label {
+  display: inline-block;
+}
 form .btn2 {
   display: inline-block;
-  padding: 10px 30px;
+  padding: 10px 20px;
   background-color: transparent;
   color: #1c1c1c;
   font-size: 15px;
   border: 1px solid black;
   transition: all 300ms ease;
-  margin-top: 10px;
+  margin-top: 5px;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -671,8 +669,11 @@ form textarea {
   .details {
     height: 550px;
   }
+  .card3 {
+    margin-bottom: 30px;
+  }
   .card3 .sizeCard {
-    height: 480px;
+    height: 450px;
   }
   /* contact html */
   .shop {
@@ -690,6 +691,9 @@ form textarea {
   }
   form {
     padding: 10px 20px;
+  }
+  form label {
+    display: none;
   }
   form .btn2 {
     margin: 0;
@@ -823,6 +827,15 @@ form textarea {
     margin-top: 30px;
   }
   /*lookbook*/
+  .details {
+    height: 500px;
+  }
+  .card3 {
+    margin-bottom: 30px;
+  }
+  .card3 .sizeCard {
+    height: 400px;
+  }
   /*contact*/
   .shop {
     display: grid;
