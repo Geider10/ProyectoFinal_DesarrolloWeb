@@ -59,16 +59,28 @@
                 <p>Envíos Rápidos: Priorizamos tu felicidad con envíos rápidos y atención dedicada. </p>
                 <p>Variedad de Pagos: Aceptamos todas las tarjeta y ademas Mercado Pago!</p>
             </div>
-            <form >
-                <label >Nombre:</label>
-                <input type="text" placeholder="Ingresa tu nombre..." name="text" class="input">
-                <label >Email:</label>
-                <input type="email" placeholder="Ingresa tu email..." name="email" class="input">
-                <label >Telefono:</label>
-                <input type="text" placeholder="Ingresa tu telefono..." name="text" class="input">
-                <textarea class="input" maxlength="100" placeholder="Hace tu pregunta, respondemos tus dudas!"
-                    name="textArea"></textarea>
-                <input type="submit" value="Enviar" class="btn2">
+            <form action="" class="formulario" id="formulario">
+                <div class="formularioGrupo"  id="grupo__nombre">
+                    <label for="nombre" class="formularioLabel" >Nombre:</label>
+                    <input type="text" placeholder="Ingresa tu nombre..." name="nombre" class="input " id="nombre">
+                    <p class="textError textOff"> El usario tiene que ser de 4 a 16 digitos</p>
+                </div>
+                <div class="formularioGrupo" id="grupo__email">
+                    <label for="email" class="formularioLabel" >Email:</label>
+                    <input type="email" placeholder="Ingresa tu email..." name="email" class="input " id="email">
+                    <p class="textError textOff"> Necesita @</p>
+                </div>
+                <div class="formularioGrupo" id="grupo__telefono">
+                    <label for="telefono" class="formularioLabel" >Telefono:</label>
+                    <input type="text" placeholder="Ingresa tu telefono..." name="telefono" class="input" id="telefono">
+                    <p class="textError textOff">Solo puede contener numeros</p>
+                </div>
+                <div class="formularioGrupo" id="grupo__contraseña">
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" placeholder="Ingresa tu contraseña" name="contraseña" class="input" id="contraseña">
+                    <p class="textError textOff">No se permite caracteres</p>
+                </div>
+                <button type="submit" class="btn2">Enviar</button>
             </form>
         </section>
     </main>

@@ -66,14 +66,33 @@ form {
     background-color: #b1b1b188;
     @include borderGeneral(10px);
     padding: 30px 30px;
+
+    .formularioGrupo{
+        margin-bottom: 5px;
+    }
     .input {
         width: 100%;
         display: block;
         padding: 5px 20px;
-        margin-bottom: 5px;
+    }
+    .borderBien{
+        border: green 1px solid;
+        background-color: green;
+    }
+    .borderMal{
+        border: red 1px solid;
+        background-color: red;
+
     }
     label{
         display: inline-block;
+    }
+    .textError{
+        text-align: center;
+        font-size: 15px;
+    }
+    .textOff{
+        display: none;
     }
     .btn2 {
         display: inline-block;
@@ -90,10 +109,5 @@ form {
             background-color: $colorSecundario;
             cursor: pointer;
         }
-    }
-
-    textarea {
-        height: 100px;
-        resize: none;
     }
 }
