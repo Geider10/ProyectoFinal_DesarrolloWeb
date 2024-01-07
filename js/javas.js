@@ -63,9 +63,9 @@ inputs.forEach((input)=>{
     input.addEventListener("blur",validarFormulario)//
 })
 formulario.addEventListener("submit",(e)=>{
-    e.preventDefault();//no se envian los datos.
+    // e.preventDefault();//no procesa los datos inputs
     if(estadoInput.nombre && estadoInput.contraseña && estadoInput.email && estadoInput.telefono){
-        formulario.reset();
+        // formulario.reset();
         inputs.forEach((input)=>{
             input.classList.remove("borderBien");
         })
@@ -79,8 +79,12 @@ formulario.addEventListener("submit",(e)=>{
         estadoInput.email = false;
         estadoInput.telefono = false;
         estadoInput.password = false;
+        setTimeout(()=>{
+            formulario.reset();
+        },1000);
     }
     else{
+        e.preventDefault();
         document.querySelector("#iconMal").classList.remove("textOff");
         document.querySelector("#iconBien").classList.add("textOff")
         setTimeout(()=>{
