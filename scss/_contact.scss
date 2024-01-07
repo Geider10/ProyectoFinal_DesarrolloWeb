@@ -68,7 +68,7 @@ form {
     padding: 30px 30px;
 
     .formularioGrupo{
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     .input {
         width: 100%;
@@ -91,12 +91,9 @@ form {
         text-align: center;
         font-size: 15px;
     }
-    .textOff{
-        display: none;
-    }
     .btn2 {
         display: inline-block;
-        padding: 10px 20px;
+        padding: 5px 20px;
         background-color:transparent;
         color: $colorSecundario;
         font-size: 15px;
@@ -109,5 +106,20 @@ form {
             background-color: $colorSecundario;
             cursor: pointer;
         }
+    }
+    .iconBien{
+        background: green;
+        padding: 5px 10px;
+        display: inline-block;
+        border-radius: 5px;
+    }
+    .iconMal{
+        background: red;
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    .textOff{
+        display: none;
     }
 }

@@ -302,7 +302,7 @@ footer p {
 }
 .featurd h2 {
   font-weight: normal;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: center;
   font-size: 35px;
   margin-bottom: 20px;
@@ -430,7 +430,7 @@ footer p {
   justify-content: space-between;
 }
 .card2 .compras .price {
-  background: red;
+  background: yellow;
   border-radius: 0 5px 5px 0;
   font-size: 1rem;
   padding: 10px;
@@ -537,7 +537,7 @@ form {
   padding: 30px 30px;
 }
 form .formularioGrupo {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 form .input {
   width: 100%;
@@ -559,12 +559,9 @@ form .textError {
   text-align: center;
   font-size: 15px;
 }
-form .textOff {
-  display: none;
-}
 form .btn2 {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 5px 20px;
   background-color: transparent;
   color: #1c1c1c;
   font-size: 15px;
@@ -578,6 +575,21 @@ form .btn2:hover {
   color: #f1f1f1;
   background-color: #1c1c1c;
   cursor: pointer;
+}
+form .iconBien {
+  background: green;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 5px;
+}
+form .iconMal {
+  background: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+form .textOff {
+  display: none;
 }
 
 .data {
@@ -841,11 +853,17 @@ form .btn2:hover {
     grid-template-areas: "adressShop" "mapShop" "questionShop" "form";
     gap: 20px;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 220px);
+    grid-template-rows: repeat(4, 235px);
     margin-bottom: 20px;
   }
   .imgShop {
     display: none;
+  }
+  form .btn2 {
+    margin-top: 0;
+  }
+  form .formulrioGrupo {
+    margin-bottom: 0;
   }
   /*faq*/
   .data {

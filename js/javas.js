@@ -27,7 +27,7 @@ const estadoInput={
 //comprobar si el input coincide con la expresion
 const validarCampo = (expresion,input,campo) =>{
     if(expresion.test(input.value)){
-        //accedo directo a traves del Id del INPUT
+        //accedo a los atributos del INPUT por su ID
         document.getElementById(campo).classList.remove("borderMal");
         document.getElementById(campo).classList.add("borderBien");
         document.querySelector(`#grupo__${campo} p` ).classList.add("textOff");
@@ -57,22 +57,34 @@ const validarFormulario = (e)=>{
         break;
     }
 }
-
+//le agrego el evento a cada input
 inputs.forEach((input)=>{
-    //le agrego el evento a cada input
     input.addEventListener("keyup", validarFormulario);//evento levanto la tecla
     input.addEventListener("blur",validarFormulario)//
 })
 formulario.addEventListener("submit",(e)=>{
     e.preventDefault();//no se envian los datos.
     if(estadoInput.nombre && estadoInput.contraseña && estadoInput.email && estadoInput.telefono){
-        alert("Rellenaste el formulario con exito!!!");
         formulario.reset();
-        document.querySelectorAll("#formulario input").forEach((input)=>{
+        inputs.forEach((input)=>{
             input.classList.remove("borderBien");
         })
+        //elementos dinamicos
+        document.getElementById("iconBien").classList.remove("textOff");
+        document.getElementById("iconMal").classList.add("textOff");
+        setTimeout(()=>{
+            document.getElementById("iconBien").classList.add("textOff");
+        },5000);
+        estadoInput.nombre = false;
+        estadoInput.email = false;
+        estadoInput.telefono = false;
+        estadoInput.password = false;
     }
     else{
-        alert("Por favor rellena el formulario correctamente");
+        document.querySelector("#iconMal").classList.remove("textOff");
+        document.querySelector("#iconBien").classList.add("textOff")
+        setTimeout(()=>{
+            document.querySelector("#iconMal").classList.add("textOff");
+        },5000);
     }
 });

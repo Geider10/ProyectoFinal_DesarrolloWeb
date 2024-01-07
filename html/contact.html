@@ -59,24 +59,27 @@
                 <div class="formularioGrupo"  id="grupo__nombre">
                     <label for="nombre" class="formularioLabel" >Nombre:</label>
                     <input type="text" placeholder="Ingresa tu nombre..." name="nombre" class="input " id="nombre">
-                    <p class="textError textOff"> El usario tiene que ser de 4 a 16 digitos</p>
+                    <p class="textError textOff">Digitos entre  4-16. No usar simbolos</p>
                 </div>
                 <div class="formularioGrupo" id="grupo__email">
                     <label for="email" class="formularioLabel" >Email:</label>
                     <input type="email" placeholder="Ingresa tu email..." name="email" class="input " id="email">
-                    <p class="textError textOff"> Necesita @</p>
+                    <p class="textError textOff">Ejemplo: correo20@email.com</p>
                 </div>
                 <div class="formularioGrupo" id="grupo__telefono">
                     <label for="telefono" class="formularioLabel" >Telefono:</label>
                     <input type="text" placeholder="Ingresa tu telefono..." name="telefono" class="input" id="telefono">
-                    <p class="textError textOff">Solo puede contener numeros</p>
+                    <p class="textError textOff">Solo se permiten numeros</p>
                 </div>
                 <div class="formularioGrupo" id="grupo__contraseña">
                     <label for="contraseña">Contraseña:</label>
                     <input type="password" placeholder="Ingresa tu contraseña" name="contraseña" class="input" id="contraseña">
-                    <p class="textError textOff">No se permite caracteres</p>
+                    <p class="textError textOff">No se permiten simbolos</p>
                 </div>
                 <button type="submit" class="btn2">Enviar</button>
+                <p class="iconBien textOff" id="iconBien"><i class="fa-solid fa-check"></i></p>
+                <p class="iconMal textOff" id="iconMal"><i class="fa-solid fa-xmark"></i></p>
+
             </form>
         </section>
     </main>
