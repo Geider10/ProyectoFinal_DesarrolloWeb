@@ -76,24 +76,46 @@ header p {
   margin: 0;
 }
 
+.temaColor {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  background-color: gray;
+  border: none;
+}
+.temaColor:hover {
+  cursor: pointer;
+}
+
+.darkMode {
+  background-color: black;
+  color: #f1f1f1;
+}
+
+.grayMode {
+  background-color: #1c1c1c;
+  color: white;
+}
+
 footer {
   padding: 20px 30px;
   border-top: black 1px solid;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #1c1c1c;
 }
 footer p {
-  color: #1c1c1c;
   display: inline-block;
   font-size: 20px;
   margin: 0;
 }
 
 .networkFooter a {
+  color: #1c1c1c;
   text-decoration: none;
   display: inline-block;
-  color: #1c1c1c;
   font-size: 25px;
   margin-left: 10px;
   transition: transform 300ms ease;
@@ -378,6 +400,25 @@ footer p {
   letter-spacing: 3px;
   font-weight: bold;
   padding-left: 30px;
+}
+
+.searchContainer {
+  border: 1px solid;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 0;
+}
+.searchContainer label {
+  font-size: 16px;
+}
+.searchContainer input {
+  padding: 5px 10px;
+  font-size: 15px;
+}
+.searchContainer .buscarError {
+  color: red;
+  margin-top: 10px;
+  display: none;
 }
 
 .collecion {

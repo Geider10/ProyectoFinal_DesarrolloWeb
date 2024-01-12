@@ -1,3 +1,38 @@
+//tema dark-light
+const btnTema = document.getElementById("tipoTema");
+const listaDark = document.querySelectorAll("[modoDark]");//obtener un lista con los elemenetos que tengas este atributo
+const listaGray = document.querySelectorAll("[modoGray]");
+let moon = "🌙",sun ="☀️";
+const ModoD =(()=>{
+    listaDark.forEach( e => e.classList.add("darkMode"));
+    listaGray.forEach(e => e.classList.add("grayMode"));
+    btnTema.textContent = sun;
+    localStorage.setItem("tema","dark");
+})
+const ModoL =(()=>{
+    listaDark.forEach(e => e.classList.remove("darkMode"));
+    listaGray.forEach(e => e.classList.remove("grayMode"));
+    btnTema.textContent = moon;
+    localStorage.setItem("tema","light");
+
+})
+btnTema.addEventListener("click",(e)=>{
+    if(btnTema.textContent === moon){
+        ModoD();
+    }
+    else{
+        ModoL();
+    }
+})
+//cargue el ultimo tema seleccionado
+document.addEventListener("DOMContentLoaded",(e)=>{
+    if(localStorage.getItem("tema") === null) localStorage.setItem("tema","light");
+    if(localStorage.getItem("tema") === "light")ModoL();
+    if(localStorage.getItem("tema") === "dark") ModoD();
+})
+
+
+//menu hamburguesa
 const nav = document.querySelector("#nav");
 const open1 = document.querySelector("#open");
 const close1 = document.querySelector("#close");
@@ -60,7 +95,7 @@ const validarFormulario = (e)=>{
 //le agrego el evento a cada input
 inputs.forEach((input)=>{
     input.addEventListener("keyup", validarFormulario);//evento levanto la tecla
-    input.addEventListener("blur",validarFormulario)//
+    input.addEventListener("blur",validarFormulario);
 })
 formulario.addEventListener("submit",(e)=>{
     // e.preventDefault();//no procesa los datos inputs
@@ -84,7 +119,7 @@ formulario.addEventListener("submit",(e)=>{
         },1000);
     }
     else{
-        e.preventDefault();
+        // e.preventDefault();
         document.querySelector("#iconMal").classList.remove("textOff");
         document.querySelector("#iconBien").classList.add("textOff")
         setTimeout(()=>{

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
-<body>
+<body modoGray>
     <header class="patron">
         <nav>
             <a href="../index.html">
@@ -24,6 +24,7 @@
                 <li><a href="lookbook.html">Modelos</a></li>
                 <li><a href="contact.html">Contacto</a></li>
                 <li><a href="faq.html">FAQ</a></li>
+                <li><button class="temaColor" id="tipoTema">🌙</button></li>
                 <li><button class="cartBtn"><i class="fa-solid fa-cart-shopping"></i></button></li>
             </ul>
         </nav>
@@ -34,6 +35,15 @@
     </a>
     <main class="patron items">
         <h2>Coleccion</h2>
+        <section class="searchContainer">
+            <label for="buscar">Buscar</label>
+            <input type="text" name="buscar" class="input" id="buscar" placeholder="Ingresa un producto">
+            <p id="buscarError" class="buscarError">No se encontro el producto!</p>
+            <ul id="resultadoList" class="resultadoList"></ul>
+        </section>
+        <section id="shopContainer" class="shopContainer">
+
+        </section>
         <section class="collecion">
             <div class="card2">
                 <div class="imgCard">
@@ -41,7 +51,7 @@
                     <h3>Megan Silver</h3>
                 </div>
                 <div class="compras">
-                    <p class="price">$90000</p>
+                    <p class="price">90000</p>
                     <button class="btnComprar" id="comprar">Comprar </button>
                 </div>
             </div>
@@ -51,7 +61,7 @@
                     <h3>Ligia Natural</h3>
                 </div>
                 <div class="compras">
-                    <p class="price">$60000</p>
+                    <p class="price">60000</p>
                     <button class="btnComprar" id="comprar">Comprar </button>
                 </div>
             </div>
@@ -61,70 +71,22 @@
                     <h3>Bursa Blue</h3>
                 </div>
                 <div class="compras">
-                    <p class="price">$80000</p>
-                    <button class="btnComprar" id="comprar">Comprar </button>
-                </div>
-            </div>
-            <div class="card2">
-                <div class="imgCard">
-                    <img src="../Media/zapatos1a.jpg" alt="zapatillas deportiva de color gris" class="on">
-                    <h3>Megan Silver</h3>
-                </div>
-                <div class="compras">
-                    <p class="price">$90000</p>
-                    <button class="btnComprar" id="comprar">Comprar </button>
-                </div>
-            </div>
-            <div class="card2">
-                <div class="imgCard">
-                    <img src="../Media/sapatos2a.jpg" alt="zapatillas clasicas de color blanco, marron y negro" class="on">
-                    <h3>Ligia Natural</h3>
-                </div>
-                <div class="compras">
-                    <p class="price">$60000</p>
-                    <button class="btnComprar" id="comprar">Comprar </button>
-                </div>
-            </div>
-            <div class="card2">
-                <div class="imgCard">
-                    <img src="../Media/sapatos3a.jpg" alt="zapatillas elegantes de color azul francia" class="on">
-                    <h3>Bursa Blue</h3>
-                </div>
-                <div class="compras">
-                    <p class="price">$80000</p>
-                    <button class="btnComprar" id="comprar">Comprar </button>
-                </div>
-            </div>
-            <div class="card2">
-                <div class="imgCard">
-                    <img src="../Media/zapatos1a.jpg" alt="zapatillas deportiva de color gris" class="on">
-                    <h3>Megan Silver</h3>
-                </div>
-                <div class="compras">
-                    <p class="price">$90000</p>
-                    <button class="btnComprar" id="comprar">Comprar </button>
-                </div>
-            </div>
-            <div class="card2">
-                <div class="imgCard">
-                    <img src="../Media/sapatos2a.jpg" alt="zapatillas clasicas de color blanco, marron y negro" class="on">
-                    <h3>Ligia Natural</h3>
-                </div>
-                <div class="compras">
-                    <p class="price">$60000</p>
+                    <p class="price">80000</p>
                     <button class="btnComprar" id="comprar">Comprar </button>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="patron">
+    <footer class="patron" modoDark>
         <p><i class="fa-regular fa-copyright"></i> 2023 by Geider Frias, derechos reservados</p>
-        <div class="networkFooter">
+        <div class="networkFooter" modoDark>
             <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
             <a href="https://www.instagram.com"> <i class="fa-brands fa-instagram"></i></a>
         </div>
     </footer>
-    <script src="../js/javas.js"></script>
+    <script src="../js/buscador.js"></script>
+    <script src="../js/formulario.js"></script>
+
 </body>
 </html>

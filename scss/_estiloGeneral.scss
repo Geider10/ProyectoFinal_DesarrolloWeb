@@ -66,6 +66,25 @@ header p{
     padding: 20px 0;
     margin: 0;
 }
+.temaColor{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    background-color: gray;
+    border: none;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.darkMode{
+    background-color: black;
+    color: $colorPrimario;
+}
+.grayMode{
+    background-color: $colorSecundario;
+    color: white;
+}
 //FOOTER
 footer {
     padding: 20px 30px;
@@ -73,8 +92,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: $colorSecundario;
     p {
-        color: $colorSecundario;
         display: inline-block;
         font-size: 20px;
         margin: 0;
@@ -82,7 +101,10 @@ footer {
 }
 
 .networkFooter a {
-    @include anclas($colorSecundario,25px);
+    color: $colorSecundario;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
     margin-left: 10px;
     transition: transform 300ms ease;
     &:hover {
