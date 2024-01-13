@@ -37,15 +37,23 @@ const createCard=((filtrado,input)=>{
     }
     else if(filtrado.length === 0){
         pError.style.display = "block";
-        listaResultado.innerHTML="";
+        // listaResultado.innerHTML="";
         // console.log("2");
     }
 })
 const validarInput=(()=>{
     const inputValue = inputBuscar.value.toLowerCase();
     //agrega en una lista las cartas que coincidan en real time
-    const filtradoProductos = convertirProducto.filter((p)=>p.name.startsWith(inputValue));
-    createCard(filtradoProductos);
+    if(inputValue.length >= 1){
+        const filtradoProductos = convertirProducto.filter((p)=>p.name.includes(inputValue));
+        createCard(filtradoProductos);
+        allProductos.forEach(e => e.style.display ="none");
+    }
+    else{
+        listaResultado.innerHTML="";
+        pError.style.display="none";
+        allProductos.forEach(e => e.style.display ="block");
+    }
 });
 // inputBuscar.addEventListener("input",validarInput);
 inputBuscar.addEventListener("keyup",validarInput);
