@@ -229,3 +229,69 @@
         font-size: 20px;
     }
 }
+.cOff{
+    display: none;
+}
+.modal{
+    background-color: $colorPrimario;
+    width: 500px;
+    position: fixed;
+    z-index: 3;
+    top:0;
+    right: 0;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    // padding: 20px;
+   
+    .hModal{
+        display: flex;
+        justify-content: space-between;
+        padding:  20px;
+        background-color: black;
+     
+        h2{
+            font-size: 30px;
+            color: white;
+        }
+        .closeCart{
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            font-size: 25px;
+            display: inline-block;
+            color: white;
+        }
+    }
+    .cModal{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .cartProduct{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border: 1px solid ;
+            padding: 10px 0;
+            margin: 5px 0;
+            .imgModal{
+                width: 50px;
+                height: 50px;
+            }
+            .closeProduct{
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                background-color: red;
+                font-size: 1rem;
+                display: inline-block;
+            }
+        }
+    }
+    .fModal{
+        padding: 10px 0;
+        p{
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+}
