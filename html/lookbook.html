@@ -27,11 +27,36 @@
           <li><a href="contact.html">Contacto</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><button class="temaColor" id="tipoTema">🌙</button></li>
-          <li><button class="cartBtn"><i class="fa-solid fa-cart-shopping"></i></button></li>
+          <li><button class="cartBtn" id="btnCart"><i class="fa-solid fa-cart-shopping"></i></button></li>
         </ul>
       </nav>
       <p>Explora la moda a tus pies: Nuestros modelos te esperan.</p>
     </header>
+    <section class="modal cOff" id="conteinerModal" >
+      <div class="hModal" id="headerModal" >
+          <h2>Carrito de compras</h2>
+          <button class="closeCart" id="btnCloseCart"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="cModal" id="contentModal" modoGray>
+          <div class="cartProduct">
+              <img src="../Media/freeShiping.jpg" alt="Diseño unico en el planeta tierra" class="imgModal">
+              <h3>Sapatos facheros</h3>
+              <p> 1</p>
+              <p>Total $50000</p>
+              <button class="closeProduct" id="btnCloseProduct"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+          <div class="cartProduct">
+              <img src="../Media/freeShiping.jpg" alt="Diseño unico en el planeta tierra" class="imgModal">
+              <h3>Sapatos facheros</h3>
+              <p> 1</p>
+              <p>Total $50000</p>
+              <button class="closeProduct" id="btnCloseProduct"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+      </div>
+      <div class="fModal" id="footerModal" modoGray>
+          <p id="payTotal"> Total a pagar : $</p>
+      </div>
+  </section>
     <a href="https://wa.me/541161539624?text=Quiero informacion sobre:" target="_blank" class="wassap">
       <img src="../Media/wassap.png" alt="logo de wassap" class="btnWass">
     </a>
@@ -140,5 +165,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../js/buscador.js"></script>
     <script src="../js/formulario.js"></script>
+    <script src="../js/carrito.js"></script>
+
 </body>
 </html>
