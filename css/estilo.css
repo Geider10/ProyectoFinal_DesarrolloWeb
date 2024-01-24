@@ -68,6 +68,13 @@ nav li a {
 nav li a:hover {
   opacity: 1;
 }
+nav li .count {
+  background-color: red;
+  font-size: 10px;
+  display: inline-block;
+  padding: 2px;
+  border-radius: 50%;
+}
 
 header p {
   font-size: 25px;
@@ -400,7 +407,7 @@ footer p {
   width: 500px;
   position: fixed;
   z-index: 3;
-  top: 0;
+  top: 60px;
   right: 0;
   box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
 }
