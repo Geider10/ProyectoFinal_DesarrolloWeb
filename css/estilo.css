@@ -467,7 +467,7 @@ footer p {
   padding: 40px 0;
 }
 .items h2 {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 40px;
   letter-spacing: 3px;
   font-weight: bold;
@@ -548,6 +548,7 @@ footer p {
   border-radius: 0 5px 5px 0;
   font-size: 1rem;
   padding: 10px;
+  color: black;
 }
 .card2 .compras .btnComprar {
   display: block;
@@ -562,7 +563,7 @@ footer p {
 .details {
   height: 630px;
   overflow: hidden;
-  background: rgba(177, 177, 177, 0.5333333333);
+  background: rgba(223, 223, 223, 0.5333333333);
 }
 
 .card3 {
