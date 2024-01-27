@@ -2,28 +2,20 @@ const d = document;
 const btnCart = d.getElementById("btnCart");
 const btnCloseCart = d.getElementById("btnCloseCart");
 const todoProductos = d.querySelectorAll(".card2")
+const contentModal = d.getElementById("contentModal");
 let carritoProductos = [];
 let conta = 0;
 
-//llenar carrito con productos seleccionados
-const contentModal = d.getElementById("contentModal");
-todoProductos.forEach(p =>{
+//si la izquierda no es verdadera sale la derecha false : null, undefined, 0, false " ".
+carritoProductos = JSON.parse(localStorage.getItem("carrito")|| []);
+todoProductos.forEach(p =>{//llenar array con productos select
     const btnComprar = p.children[1].children[1];
-    btnComprar.addEventListener("click",(e)=>{
+    btnComprar.addEventListener("click",()=>{
         const nam = p.children[0].children[1].textContent;
-        const ckeck = carritoProductos.some(product =>{
-            if(product.Name === nam){
-                return true;
-            }
-            else{
-                return false;
-            }
-        })
+        const ckeck = carritoProductos.some(product =>{ return product.Name === nam? true : false})
         if(ckeck){
-            carritoProductos.map((p)=>{
-                if(p.Name == nam)
-                p.Quantity++;
-            });
+            carritoProductos.map((p)=>{ p.Name === nam && p.Quantity++;});
+            saveCart();
         }
         else{
             carritoProductos.push({
@@ -35,10 +27,11 @@ todoProductos.forEach(p =>{
             });
             conta++;
             countCart();
+            saveCart();
         }
     })
 })
-
+//renderizar
 btnCart.addEventListener("click",(e)=>{
     contentModal.innerHTML="";
     d.getElementById("conteinerModal").classList.remove("cOff");
@@ -51,8 +44,7 @@ btnCart.addEventListener("click",(e)=>{
         <p>${p.Quantity}</p>
         <p>${p.Price * p.Quantity}</p>
         <button class="closeProduct" id="btnCloseProduct">X</button>
-        <p class="cOff">${p.Id}</p>
-        `;
+        <p class="cOff">${p.Id}</p>`;
         contentModal.appendChild(cartProduct);
         const btnDeleteProduct = cartProduct.children[4];
         deleteProduct(btnDeleteProduct,p);
@@ -74,19 +66,22 @@ const deleteProduct=(btnDelete,product)=>{
                 conta2 = 0;
                 countCart();
                 refreshTotal();
+                saveCart();
             }
             else{
                 conta2++;
             }
         }) 
+
     })
 }
 const countCart = ()=>{ 
     if(carritoProductos.length >= 1){
         let long = carritoProductos.length;
+        localStorage.setItem("lenghtCart",long);
         const quantityProducts = d.getElementById("countCart");
         quantityProducts.style.display = "block";
-        quantityProducts.innerText = long;
+        quantityProducts.innerText = JSON.parse(localStorage.getItem("lenghtCart"));
     }
     else{
         d.getElementById("countCart").style.display ="none";
@@ -96,3 +91,6 @@ const refreshTotal = ()=>{
     let totalPagar = carritoProductos.reduce((acc, p)=>acc + (p.Price * p.Quantity),0);
     d.getElementById("payTotal").textContent = totalPagar;
 }
+
+const saveCart =()=>{ localStorage.setItem("carrito",JSON.stringify(carritoProductos))}
+countCart();

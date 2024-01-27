@@ -16,33 +16,22 @@ const ModoL =(()=>{
     localStorage.setItem("tema","light");
 
 })
-btnTema.addEventListener("click",(e)=>{
-    if(btnTema.textContent === moon){
-        ModoD();
-    }
-    else{
-        ModoL();
-    }
+btnTema.addEventListener("click",()=>{
+    btnTema.textContent === moon? ModoD():ModoL();
 })
 //cargue el ultimo tema seleccionado
-document.addEventListener("DOMContentLoaded",(e)=>{
-    if(localStorage.getItem("tema") === null) localStorage.setItem("tema","light");
-    if(localStorage.getItem("tema") === "light")ModoL();
-    if(localStorage.getItem("tema") === "dark") ModoD();
+document.addEventListener("DOMContentLoaded",()=>{
+    (localStorage.getItem("tema") === null) && localStorage.setItem("tema","light");
+    localStorage.getItem("tema")==="light" && ModoL();
+    localStorage.getItem("tema")==="dark" && ModoD();
 })
-
-
 //menu hamburguesa
 const nav = document.querySelector("#nav");
 const open1 = document.querySelector("#open");
 const close1 = document.querySelector("#close");
 
-open1.addEventListener("click", () =>{
-    nav.classList.add("visible");
-})
-close1.addEventListener("click",() =>{
-    nav.classList.remove("visible");
-})
+open1.addEventListener("click", () =>{ nav.classList.add("visible")})
+close1.addEventListener("click",() =>{ nav.classList.remove("visible")})
 
 //validar formulario
 const formulario = document.getElementById("formulario");
@@ -92,38 +81,30 @@ const validarFormulario = (e)=>{
         break;
     }
 }
-//le agrego el evento a cada input
+
 inputs.forEach((input)=>{
-    input.addEventListener("keyup", validarFormulario);//evento levanto la tecla
+    input.addEventListener("keyup", validarFormulario);
     input.addEventListener("blur",validarFormulario);
 })
 formulario.addEventListener("submit",(e)=>{
     // e.preventDefault();//no procesa los datos inputs
     if(estadoInput.nombre && estadoInput.contraseña && estadoInput.email && estadoInput.telefono){
-        // formulario.reset();
-        inputs.forEach((input)=>{
-            input.classList.remove("borderBien");
-        })
-        //elementos dinamicos
+        inputs.forEach(input=>{input.classList.remove("borderBien")})
         document.getElementById("iconBien").classList.remove("textOff");
         document.getElementById("iconMal").classList.add("textOff");
-        setTimeout(()=>{
-            document.getElementById("iconBien").classList.add("textOff");
-        },5000);
+        setTimeout(()=>{document.getElementById("iconBien").classList.add("textOff");},5000);
         estadoInput.nombre = false;
         estadoInput.email = false;
         estadoInput.telefono = false;
         estadoInput.password = false;
-        setTimeout(()=>{
-            formulario.reset();
-        },1000);
+        setTimeout(()=>{formulario.reset()},1000);
+        e.preventDefault();
+
     }
     else{
-        // e.preventDefault();
+        e.preventDefault();
         document.querySelector("#iconMal").classList.remove("textOff");
         document.querySelector("#iconBien").classList.add("textOff")
-        setTimeout(()=>{
-            document.querySelector("#iconMal").classList.add("textOff");
-        },5000);
+        setTimeout(()=>{document.querySelector("#iconMal").classList.add("textOff")},5000);
     }
 });

@@ -14,7 +14,7 @@ allProductos.forEach((p,iterrador)=>{
     })
 })
 
-const createCard=((filtrado,input)=>{
+const createCard=((filtrado)=>{
     listaResultado.innerHTML="";
     if(filtrado.length >= 1){
         pError.style.display = "none";
@@ -32,13 +32,10 @@ const createCard=((filtrado,input)=>{
                 <button class="btnComprar" id="comprar">${p.boton}</button>
             </div>`
             listaResultado.appendChild(contentCard);
-            // console.log("1");
         });
     }
     else if(filtrado.length === 0){
         pError.style.display = "block";
-        // listaResultado.innerHTML="";
-        // console.log("2");
     }
 })
 const validarInput=(()=>{
@@ -55,5 +52,4 @@ const validarInput=(()=>{
         allProductos.forEach(e => e.style.display ="block");
     }
 });
-// inputBuscar.addEventListener("input",validarInput);
 inputBuscar.addEventListener("keyup",validarInput);
